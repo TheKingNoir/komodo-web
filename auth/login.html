@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f2ed" />
+    <title>Inicia sesión | Komodo Host</title>
+    <link rel="stylesheet" href="/auth/login.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a href="https://komodo-host.site" class="home-link">
+        <span class="top-logo">
+          <img src="../images/logo.png" alt="Komodo Hosting" />
+        </span>
+
+        <span class="home-text"> Ir a Komodo-Host.site </span>
+
+        <span class="home-arrow">→</span>
+      </a>
+    </header>
+
+    <main class="login-page">
+      <section class="brand-section">
+        <div class="brand-content">
+          <div class="large-logo-frame">
+            <img src="../images/logo.png" alt="Komodo Hosting" />
+          </div>
+
+          <div class="brand-info">
+            <span class="brand-label"> KOMODO HOST </span>
+
+            <h2>
+              Todo lo que necesitas.
+              <span>En un solo lugar.</span>
+            </h2>
+
+            <p>Accede a tu cuenta y continúa gestionando y desarrollando tus proyectos con nosotros.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="login-card">
+          <div class="form-header">
+            <span class="form-label"> CUENTA KOMODO </span>
+
+            <h1>Inicia sesión</h1>
+
+            <p>Accede a tu cuenta para continuar.</p>
+          </div>
+
+          <form id="loginForm" class="login-form">
+            <div class="form-group">
+              <label for="email"> Correo electrónico </label>
+
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password"> Contraseña </label>
+
+              <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Tu contraseña" autocomplete="current-password" required />
+
+                <button type="button" id="togglePassword" class="password-toggle">Mostrar</button>
+              </div>
+            </div>
+
+            <div class="login-options">
+              <label class="remember-option">
+                <input type="checkbox" id="remember" name="remember" />
+
+                <span> Recordarme </span>
+              </label>
+
+              <a href="#" id="forgotPassword" class="forgot-password"> ¿Olvidaste tu contraseña? </a>
+            </div>
+
+            <button type="submit" class="login-button" id="loginButton">
+              <span> Iniciar sesión </span>
+
+              <span class="button-arrow"> → </span>
+            </button>
+
+            <div class="divider">
+              <span></span>
+
+              <p>o</p>
+
+              <span></span>
+            </div>
+
+            <div id="googleButtonContainer"></div>
+
+            <button type="button" class="google-button" id="googleButton" style="display: none">
+              <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.35 12.27c0-.79-.07-1.55-.23-2.27H12v4.3h5.23a4.47 4.47 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.92-4.18 2.92-7.42Z" fill="#4285F4" />
+
+                <path
+                  d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.74 9.74 0 0 0 12 21.5Z"
+                  fill="#34A853"
+                />
+
+                <path
+                  d="M6.54 13.58A5.85 5.85 0 0 1 6.23 12c0-.55.11-1.09.31-1.58V7.89H3.3A9.74 9.74 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.11l3.24-2.53Z"
+                  fill="#FBBC05"
+                />
+
+                <path
+                  d="M12 6.39c1.43 0 2.71.49 3.72 1.46l2.79-2.79C16.84 3.42 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.7 5.39l3.24 2.53c1.01-2.31 3.16-4.03 5.7-4.03Z"
+                  fill="#EA4335"
+                />
+              </svg>
+
+              <span> Iniciar sesión con Google </span>
+            </button>
+
+            <p class="signup-text">
+              ¿No tienes una cuenta?
+
+              <a href="/signup"> Regístrate </a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script src="/auth/login.js"></script>
+  </body>
+</html>

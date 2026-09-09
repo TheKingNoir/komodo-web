@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Komodo Host</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_movil.css" />
+
+    <link rel="stylesheet" href="services.css" />
+
+    <link rel="stylesheet" href="collaborators.css" />
+
+    <link rel="stylesheet" href="faq_footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="background-glow"></div>
+
+    <div class="top-bar">
+      <div class="top-bar-buttons">
+        <a href="https://komodo-host.site/login" class="top-bar-btn top-bar-login"> Log In </a>
+
+        <a href="https://komodo-host.site/signup" class="top-bar-btn top-bar-signup"> Sign Up </a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <header>
+        <div class="logo-container">
+          <a href="https://komodo-host.site">
+            <img src="images/logo.png" class="logo" alt="Komodo Host" />
+          </a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="mobileMenu">
+          <a href="https://komodo-host.site"> Inicio </a>
+
+          <a href="#servicios"> Servicios </a>
+
+          <a href="#servicios"> Planes </a>
+
+          <a href="#estado"> Estado </a>
+
+          <a href="#desarrollo"> Desarrollo </a>
+
+          <a href="#soporte"> Soporte </a>
+        </nav>
+      </header>
+
+      <div class="hero-body">
+        <div class="hero-image">
+          <div class="hero-bg-panel"></div>
+
+          <img src="images/hero.png" alt="Komodo Host" id="heroMainImage" />
+        </div>
+
+        <div class="hero-text">
+          <p class="mini-title">BIENVENIDO A KOMODO HOST</p>
+
+          <h1>
+            Infraestructura
+
+            <br />
+
+            dedicada para
+
+            <br />
+
+            <span id="animatedText"></span>
+          </h1>
+
+          <p class="description">
+            Ofrecemos servicios de alojamiento y soluciones ideales para el desarrollo y escalabilidad de tu proyecto al máximo rendimiento. Construye y expande
+            sobre un entorno hecho para crecer contigo.
+          </p>
+
+          <div class="buttons">
+            <a href="https://komodo-host.site/signup" class="primary-button"> Iniciar ahora </a>
+
+            <a href="#servicios" class="secondary-button"> Ver servicios </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Velocidad Garantizada</h3>
+
+            <p>
+              Nuestro rendimiento está altamente respaldado por servidores distribuidos en Centroamérica que ofrecen latencia ultrabaja y procesamiento
+              optimizado para el máximo rendimiento de tus proyectos.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Hardware Físico de Alto nivel</h3>
+
+            <p>
+              Operamos con servidores físicos modernos completamente dedicados, permitiendo un control absoluto sobre el hardware y entregando un servicio más
+              amplio, flexible y personalizado.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Uptime 99.9%</h3>
+
+            <p>
+              Garantizamos máxima estabilidad y tiempo en línea constante, asegurando que nuestros servicios permanezcan activos las 24 horas del día y los 7
+              días de la semana.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section secondary-features">
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Soporte Técnico 24/7</h3>
+
+            <p>Atención directa y especializada disponible en todo momento para resolver dudas, solucionar problemas y ayudarte a gestionar tu servidor.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Planes desde $1.20 USD</h3>
+
+            <p>Contamos con una amplia gama de planes a precios competitivos y accesibles, escalables según los recursos necesarios.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+
+          <div class="feature-content">
+            <h3>Seguridad Certificada</h3>
+
+            <p>Monitoreo constante y mitigación DDoS avanzada para mantener tus servicios seguros, eficientes y protegidos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="servicios">
+      <h2 class="services-title">Servicios:</h2>
+
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-content-wrapper">
+            <div class="service-info">
+              <h3 class="service-name">Komodo Host: Apps, Bots, Webs y Más.</h3>
+
+              <p class="service-description">
+                Servidores optimizados para desplegar tus proyectos con disponibilidad para los entornos de ejecución más populares, paneles intuitivos,
+                velocidad y respuesta en tiempo real.
+              </p>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-servers-block">
+              <span class="servers-label"> Servidores: </span>
+
+              <div class="servers-logos">
+                <div class="server-item node">
+                  <img src="images/nodejs.png" alt="Node.js" />
+
+                  Nodejs
+                </div>
+
+                <div class="server-item python">
+                  <img src="images/python.png" alt="Python" />
+
+                  Python
+                </div>
+
+                <div class="server-item golang">
+                  <img src="images/golang.png" alt="Golang" />
+
+                  Golang
+                </div>
+
+                <div class="server-item java">
+                  <img src="images/java.png" alt="Java" />
+
+                  Java
+                </div>
+              </div>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-action-block">
+              <span class="action-label"> Ver planes disponibles: </span>
+
+              <a href="https://komodo-host.site" class="service-btn">
+                Host Dashboard
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-image">
+            <img src="images/service-preview.png" alt="Preview del Servicio Host" />
+          </div>
+        </div>
+
+        <div class="service-card phone-card">
+          <div class="service-content-wrapper">
+            <div class="service-info">
+              <h3 class="service-name phone-title">Komodo Phone: Números Virtuales.</h3>
+
+              <p class="service-description">
+                Obtén números virtuales internacionales de más de 50 países para verificación inmediata con WhatsApp y Telegram, con recepción instantánea de
+                SMS.
+              </p>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-servers-block">
+              <span class="servers-label phone-label"> Plataformas: </span>
+
+              <div class="servers-logos">
+                <div class="server-item whatsapp">
+                  <img src="images/whatsapp.png" alt="WhatsApp" />
+
+                  WhatsApp
+                </div>
+
+                <div class="server-item telegram">
+                  <img src="images/telegram.png" alt="Telegram" />
+
+                  Telegram
+                </div>
+              </div>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-action-block">
+              <span class="action-label phone-label"> Ver opciones disponibles: </span>
+
+              <a href="https://komodo-host.site" class="service-btn phone-btn">
+                Phone Dashboard
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-image">
+            <img src="images/phone-preview.png" alt="Preview del Servicio Phone" />
+          </div>
+        </div>
+
+        <div class="service-card ai-card">
+          <div class="service-content-wrapper">
+            <div class="service-info">
+              <h3 class="service-name ai-title">Komodo AI Studio: Modelos de IA.</h3>
+
+              <p class="service-description">
+                Prueba nuestro servicio API de acceso a nuestros modelos de inteligencia artificial, optimizados para generación, procesamiento e integración
+                rápida.
+              </p>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-servers-block">
+              <span class="servers-label ai-label"> Modelos: </span>
+
+              <div class="servers-logos">
+                <div class="server-item basilisk-e1">
+                  <img src="images/basilisk1.png" alt="Basilisk-e1" />
+
+                  Basilisk-e1
+                </div>
+
+                <div class="server-item basilisk-a35">
+                  <img src="images/basilisk2.png" alt="Basilisk-a3.5" />
+
+                  Basilisk-a2
+                </div>
+              </div>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-action-block">
+              <div class="action-item">
+                <span class="action-label ai-label"> Ver Planes API disponibles: </span>
+
+                <a href="https://komodo-host.site" class="service-btn ai-btn">
+                  API Dashboard
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="action-item">
+                <span class="action-label ai-label"> Usar Basilisk AI: </span>
+
+                <a href="https://komodo-host.site" class="service-btn ai-btn">
+                  Basilisk Chat
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-image">
+            <img src="images/ai-preview.png" alt="Preview del Servicio AI Studio" />
+          </div>
+        </div>
+
+        <div class="service-card custom-service-card">
+          <div class="service-content-wrapper">
+            <div class="service-info">
+              <h3 class="service-name custom-title">¿Requieres algún otro servicio personalizado?</h3>
+
+              <p class="service-description custom-desc">Contáctanos y diseñamos una solución a la medida.</p>
+            </div>
+
+            <div class="service-divider"></div>
+
+            <div class="service-action-block custom-action-block">
+              <span class="action-label custom-label"> Contáctanos: </span>
+
+              <div class="custom-buttons-group">
+                <a href="mailto:contacto@komodo-host.site" class="service-btn custom-btn email-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+
+                  Correo
+                </a>
+
+                <a
+                  href="https://chat.whatsapp.com/CkeUeqz4FrQ6CyY8DibvYx"
+                  class="service-btn custom-btn whatsapp-btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                    ></path>
+                  </svg>
+
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collaborators-section" id="colaboradores">
+      <div class="collaborators-container">
+        <div class="collaborators-heading">
+          <h2 class="collaborators-title">Colaboradores</h2>
+
+          <p class="collaborators-subtitle">Personas y equipos que forman parte del desarrollo, infraestructura y crecimiento de Komodo Host.</p>
+        </div>
+
+        <div class="collaborators-grid">
+          <article class="collaborator-card collaborator-noir">
+            <div class="collaborator-profile">
+              <img src="https://raw.githubusercontent.com/ToxiPain/ToxiPain/main/profile-noir.png" alt="TheKingNoir" class="collaborator-avatar" />
+
+              <div class="collaborator-info">
+                <h3>TheKingNoir</h3>
+
+                <p class="collaborator-role">
+                  <span class="bot-symbol"> ♙ </span>
+
+                  Raphael-WA-BOT
+                </p>
+
+                <a href="https://raphaelbot.com" class="collaborator-button collaborator-button-purple" target="_blank" rel="noopener">
+                  Página web
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M15 3h6v6"></path>
+
+                    <path d="M10 14L21 3"></path>
+
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collaborator-card collaborator-toxi">
+            <div class="collaborator-profile">
+              <img src="https://raw.githubusercontent.com/ToxiPain/ToxiPain/main/profile-toxi.png" alt="ToxiPain" class="collaborator-avatar" />
+
+              <div class="collaborator-info">
+                <h3>ToxiPain</h3>
+
+                <p class="collaborator-role">
+                  <img src="images/favicon.png" alt="Komodo" class="mini-komodo-icon" />
+
+                  Komodo Software Team
+                </p>
+
+                <a href="https://github.com/ToxiPain" class="collaborator-button collaborator-button-green" target="_blank" rel="noopener">
+                  GitHub
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3"></path>
+
+                    <path
+                      d="M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collaborator-card collaborator-dego">
+            <div class="collaborator-profile">
+              <img src="https://avatars.githubusercontent.com/u/110004076?v=4" alt="Dego" class="collaborator-avatar" />
+
+              <div class="collaborator-info">
+                <h3>Dego</h3>
+
+                <p class="collaborator-role">
+                  <img src="images/favicon.png" alt="Komodo" class="mini-komodo-icon" />
+
+                  Komodo Hardware Team
+                </p>
+
+                <a href="https://github.com/Dego06" class="collaborator-button collaborator-button-green" target="_blank" rel="noopener noreferrer">
+                  GitHub
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3"></path>
+
+                    <path
+                      d="M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <h2 class="faq-title">Preguntas Frecuentes</h2>
+
+        <p class="faq-subtitle">Resolvemos tus dudas principales para que empieces a desplegar sin complicaciones.</p>
+
+        <div class="faq-accordion">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span> ¿Cuáles son los métodos de pago disponibles? </span>
+
+              <svg
+                class="faq-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Contamos con una amplia variedad de métodos de pago seguros y certificados, incluyendo PayPal, Binance Pay, Google Pay, Apple Pay y tarjetas de
+                débito y crédito Visa y Mastercard. Si prefieres utilizar otro método convencional, puedes consultarlo directamente con nuestro equipo de
+                atención al cliente.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span> ¿Qué hago si la plataforma presenta fallas o se cae el servicio? </span>
+
+              <svg
+                class="faq-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Garantizamos la máxima estabilidad y disponibilidad de nuestros servicios. Sin embargo, en caso de imprevistos técnicos o caídas no programadas
+                te compensamos con tiempo de servicio gratuito en tu suscripción como respaldo a nuestro compromiso de calidad. En estos casos no dudes en
+                contactar con nuestro equipo de soporte técnico.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span> ¿Mis datos personales y bancarios están seguros en la plataforma? </span>
+
+              <svg
+                class="faq-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Totalmente. Utilizamos protocolos de encripción de alta seguridad y pasarelas de pago certificadas bajo estándares internacionales para
+                garantizar que toda tu información personal y financiera se mantenga protegida y confidencial.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer" id="soporte">
+      <div class="footer-container">
+        <div class="footer-col brand-col">
+          <a href="https://komodo-host.site" class="footer-logo-link">
+            <img src="images/logo.png" alt="Komodo Hosting" class="footer-logo" />
+          </a>
+
+          <p class="footer-description">2026 Managua, Nicaragua.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Plataforma</h4>
+
+          <ul class="footer-links">
+            <li>
+              <a href="https://komodo-host.site"> Komodo Host </a>
+            </li>
+
+            <li>
+              <a href="#servicios"> Komodo Phone </a>
+            </li>
+
+            <li>
+              <a href="#servicios"> Komodo AI Studio </a>
+            </li>
+
+            <li>
+              <a href="#estado"> Estado del Servicio </a>
+            </li>
+
+            <li>
+              <a href="#"> Términos y Condiciones </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col social-col">
+          <h4 class="footer-col-title">Redes Sociales & Comunidad</h4>
+
+          <div class="footer-social-links">
+            <a href="https://whatsapp.com/channel/0029Vb7rONuAu3aRrzGtHL2r" class="social-btn whatsapp-channel" target="_blank" rel="noopener">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                ></path>
+              </svg>
+
+              Canal de WhatsApp
+            </a>
+
+            <a href="https://chat.whatsapp.com/CkeUeqz4FrQ6CyY8DibvYx" class="social-btn whatsapp-community" target="_blank" rel="noopener">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+
+                <circle cx="9" cy="7" r="4"></circle>
+
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+
+              Comunidad WhatsApp
+            </a>
+
+            <div class="footer-social-row">
+              <a href="https://github.com/Komodo-Host" class="social-btn github" target="_blank" rel="noopener">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+
+                GitHub
+              </a>
+
+              <a href="mailto:contacto@komodo-host.site" class="social-btn email">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+
+                Correo Electrónico
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p>&copy; 2026 Komodo Host. Todos los derechos reservados.</p>
+
+          <div class="status-indicator" id="estado">
+            <span class="status-dot"></span>
+
+            Sistemas operando al 100%
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

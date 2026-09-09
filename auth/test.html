@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Diagnóstico Google</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1>Diagnóstico Google Sign-In</h1>
+    <div
+      id="g_id_onload"
+      data-client_id="299926714065-f8aj1skulm7la2aonrj2lk04j6r1lh57.apps.googleusercontent.com"
+      data-callback="handleCredentialResponse"
+      data-auto_prompt="false"
+    ></div>
+    <div class="g_id_signin" data-type="standard"></div>
+    <button onclick="testGoogle()">Probar Google</button>
+    <pre id="log"></pre>
+
+    <script>
+      function log(msg) {
+        document.getElementById("log").textContent += msg + "\n";
+        console.log(msg);
+      }
+
+      function handleCredentialResponse(response) {
+        log("✅ ¡ÉXITO! Credencial recibida");
+        log("Credential length: " + response.credential.length);
+        alert("¡Funcionó! Revisa la consola");
+      }
+
+      function testGoogle() {
+        log("🔍 Diagnosticando...");
+        log("Origen: " + window.location.origin);
+        log("Google disponible: " + (typeof google !== "undefined"));
+        log("Google.accounts: " + (typeof google?.accounts !== "undefined"));
+        log("Google.accounts.id: " + (typeof google?.accounts?.id !== "undefined"));
+
+        if (typeof google !== "undefined" && google.accounts && google.accounts.id) {
+          log("✅ Inicializando Google...");
+          try {
+            google.accounts.id.initialize({
+              client_id: "299926714065-f8aj1skulm7la2aonrj2lk04j6r1lh57.apps.googleusercontent.com",
+              callback: handleCredentialResponse,
+              cancel_on_tap_outside: false
+            });
+            log("✅ Inicialización exitosa");
+            log("🔄 Mostrando prompt...");
+            google.accounts.id.prompt();
+            log("✅ Prompt mostrado");
+          } catch (e) {
+            log("❌ Error: " + e.message);
+          }
+        } else {
+          log("❌ Google no está disponible");
+          log("Esperando carga...");
+          setTimeout(testGoogle, 1000);
+        }
+      }
+
+      window.onload = function () {
+        log("📄 Página cargada");
+        setTimeout(testGoogle, 500);
+      };
+    </script>
+  </body>
+</html>

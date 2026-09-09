@@ -1,0 +1,398 @@
+.faq-section {
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 100px 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  color: #0f172a;
+}
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+.faq-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq-item {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+.faq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #cbd5e1;
+  transition: background 0.3s ease;
+}
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+.faq-item[open]::before,
+.faq-item:hover::before {
+  background: linear-gradient(180deg, #1d4ed8, #1e3a8a);
+}
+.faq-item[open] {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.faq-question {
+  padding: 22px 28px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  list-style: none;
+}
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-icon {
+  color: #64748b;
+  flex-shrink: 0;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  margin-left: 16px;
+}
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+  color: #1d4ed8;
+}
+.faq-question:hover .faq-icon {
+  color: #1e3a8a;
+}
+.faq-answer {
+  padding: 0 28px 24px 28px;
+  color: #334155;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 2px;
+  padding-top: 18px;
+}
+.faq-answer p {
+  margin: 0;
+}
+.main-footer {
+  width: 100%;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(72, 111, 216, 0.16), transparent 32%),
+    radial-gradient(circle at 85% 75%, rgba(30, 42, 68, 0.22), transparent 30%),
+    linear-gradient(
+      145deg,
+      rgba(30, 42, 68, 0.96) 0%,
+      rgba(24, 34, 56, 0.94) 48%,
+      rgba(30, 50, 76, 0.96) 100%
+    );
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  padding-top: 44px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 8%;
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(72, 111, 216, 0.14), transparent 70%);
+  filter: blur(35px);
+  pointer-events: none;
+}
+.main-footer::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 500px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(87, 135, 190, 0.12), transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px 20px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1.6fr;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.footer-logo-link {
+  display: inline-block;
+  width: fit-content;
+}
+.footer-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b4c0d0;
+  max-width: 320px;
+  margin: 0;
+}
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 14px 0;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  color: #aebacd;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
+}
+.footer-links a:hover {
+  color: #70a7ff;
+  transform: translateX(3px);
+}
+.social-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-social-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.footer-social-row .social-btn {
+  flex: 1;
+  justify-content: center;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.social-btn svg {
+  color: #aebacd;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.social-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+.social-btn.whatsapp-channel:hover {
+  border-color: #25d366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
+}
+.social-btn.whatsapp-channel:hover svg {
+  color: #25d366;
+}
+.social-btn.whatsapp-community:hover {
+  border-color: #128c7e;
+  box-shadow: 0 4px 12px rgba(18, 140, 126, 0.15);
+}
+.social-btn.whatsapp-community:hover svg {
+  color: #25d366;
+}
+.social-btn.github:hover {
+  border-color: #a855f7;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+.social-btn.github:hover svg {
+  color: #a855f7;
+}
+.social-btn.email:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+}
+.social-btn.email:hover svg {
+  color: #38bdf8;
+}
+.footer-bottom {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(24, 34, 56, 0.94), rgba(18, 28, 47, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 14px 0;
+  position: relative;
+  z-index: 1;
+}
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #8291a8;
+}
+.footer-bottom p {
+  margin: 0;
+}
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5b3c6;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse-status 2s infinite;
+}
+@keyframes pulse-status {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .brand-col {
+    grid-column: span 2;
+  }
+  .footer-description {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 60px 16px;
+  }
+  .faq-title {
+    font-size: 1.8rem;
+  }
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+  .faq-answer {
+    padding: 0 20px 20px 20px;
+    font-size: 0.92rem;
+  }
+  .footer-logo {
+    height: 48px;
+  }
+  .main-footer {
+    padding-top: 32px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0 20px 20px 20px;
+  }
+  .brand-col {
+    grid-column: span 1;
+    gap: 10px;
+  }
+  .footer-col-title {
+    margin-bottom: 10px;
+  }
+  .footer-links {
+    gap: 9px;
+  }
+  .footer-social-links {
+    gap: 8px;
+  }
+  .footer-social-row {
+    flex-direction: column;
+  }
+  .footer-bottom {
+    padding: 12px 0;
+  }
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

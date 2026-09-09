@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#f3f2ed" />
+
+    <title>Dashboard | Komodo Hosting</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">
+          <img src="../images/logo.png" alt="Komodo Hosting" />
+        </span>
+
+        <span class="brand-name">
+          <strong> KOMODO HOSTING </strong>
+
+          <span> DASHBOARD </span>
+        </span>
+      </a>
+
+      <div class="account-container">
+        <button type="button" id="accountButton" class="account-button" aria-label="Abrir menú de cuenta" aria-expanded="false">
+          <span id="accountInitial"> ? </span>
+        </button>
+
+        <div id="accountMenu" class="account-menu">
+          <div class="account-info">
+            <span class="account-info-label"> CUENTA </span>
+
+            <span id="accountName" class="account-info-name"> Usuario </span>
+          </div>
+
+          <button type="button" id="logoutButton" class="logout-button">Cerrar sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <div class="dashboard-content">
+        <section class="welcome">
+          <span class="welcome-label"> KOMODO HOSTING </span>
+
+          <h1>
+            Bienvenido,
+            <span id="welcomeName"> usuario </span>.
+          </h1>
+
+          <p>Este es tu panel de control. Próximamente podrás gestionar tus proyectos y servicios desde aquí.</p>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="dashboard-card">
+            <span class="card-label"> CUENTA </span>
+
+            <h2>Tu cuenta</h2>
+
+            <p>Gestiona la información básica de tu cuenta Komodo.</p>
+          </article>
+
+          <article class="dashboard-card">
+            <span class="card-label"> PROYECTOS </span>
+
+            <h2>Tus proyectos</h2>
+
+            <p>Aquí aparecerán tus proyectos y servicios desplegados.</p>
+          </article>
+
+          <article class="dashboard-card">
+            <span class="card-label"> SERVIDORES </span>
+
+            <h2>Tus servidores</h2>
+
+            <p>La gestión de servidores estará disponible próximamente.</p>
+          </article>
+        </section>
+
+        <div class="coming-soon">
+          <div class="coming-soon-text">
+            <strong> Panel de Komodo Hosting </strong>
+
+            <span> El ecosistema de hosting se añadirá progresivamente. </span>
+          </div>
+
+          <span class="status"> EN DESARROLLO </span>
+        </div>
+      </div>
+    </main>
+
+    <script src="/dashboard/index.js"></script>
+  </body>
+</html>

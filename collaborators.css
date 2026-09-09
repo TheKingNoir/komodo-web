@@ -1,0 +1,431 @@
+:root {
+  --collab-bg: rgba(30, 70, 92, 0.72);
+  --collab-card: rgba(20, 48, 66, 0.48);
+  --collab-card-border: rgba(255, 255, 255, 0.16);
+  --collab-text: #ffffff;
+  --collab-text-soft: rgba(235, 245, 250, 0.78);
+  --collab-text-muted: rgba(220, 235, 242, 0.58);
+  --collab-blue: #486fd8;
+  --collab-blue-light: #6f91ec;
+  --collab-blue-glow: rgba(72, 111, 216, 0.25);
+  --collab-purple: #9b5cff;
+  --collab-purple-light: #b77cff;
+  --collab-purple-glow: rgba(155, 92, 255, 0.24);
+  --collab-green: #39d98a;
+  --collab-green-light: #58e8a0;
+  --collab-green-glow: rgba(57, 217, 138, 0.22);
+  --collab-github-blue: #2e436a;
+  --collab-github-blue-light: #3f5a8a;
+  --collab-github-blue-glow: rgba(46, 67, 106, 0.35);
+  --collab-radius: 18px;
+}
+.collaborators-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 24px 120px;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(72, 111, 216, 0.16), transparent 32%),
+    radial-gradient(circle at 88% 76%, rgba(57, 217, 138, 0.07), transparent 30%),
+    linear-gradient(
+      180deg,
+      rgba(30, 42, 68, 0.78) 0%,
+      rgba(35, 73, 92, 0.76) 50%,
+      rgba(43, 86, 104, 0.72) 100%
+    );
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.collaborators-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.015) 45%,
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+.collaborators-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(900px, 80%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  pointer-events: none;
+}
+.collaborators-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.collaborators-heading {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+.collaborators-title {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(15, 35, 48, 0.18);
+}
+.collaborators-subtitle {
+  margin: 18px auto 0;
+  max-width: 680px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--collab-text-soft);
+}
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+.collaborator-card {
+  position: relative;
+  min-width: 0;
+  padding: 22px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035)),
+    rgba(20, 48, 66, 0.46);
+  border: 1px solid var(--collab-card-border);
+  border-radius: var(--collab-radius);
+  box-sizing: border-box;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 15px 35px rgba(15, 40, 55, 0.14);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.collaborator-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  filter: blur(25px);
+  pointer-events: none;
+}
+.collaborator-card:hover {
+  transform: translateY(-5px);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
+    rgba(20, 55, 74, 0.52);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 22px 45px rgba(15, 40, 55, 0.2);
+}
+.collaborator-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+}
+.collaborator-avatar {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(10, 35, 50, 0.28);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.collaborator-card:hover .collaborator-avatar {
+  transform: scale(1.04);
+}
+.collaborator-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1;
+}
+.collaborator-info h3 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--collab-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.collaborator-role {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 7px 0 13px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--collab-text-soft);
+}
+.bot-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  color: var(--collab-blue-light);
+  font-size: 13px;
+}
+.mini-komodo-icon {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.collaborator-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 9px 22px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  border: none;
+  transition: all 0.25s ease;
+}
+.collaborator-button svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  transition: transform 0.25s ease;
+}
+.collaborator-button:hover svg {
+  transform: translateX(4px);
+}
+.collaborator-button-purple {
+  color: #ffffff;
+  background: var(--collab-purple);
+  box-shadow: 0 4px 12px var(--collab-purple-glow);
+}
+.collaborator-button-purple:hover {
+  color: #ffffff;
+  background: #8340e6;
+  box-shadow: 0 0 20px var(--collab-purple-glow);
+  transform: translateY(-2px);
+}
+.collaborator-button-green {
+  color: #ffffff;
+  background: var(--collab-github-blue);
+  box-shadow: 0 4px 12px var(--collab-github-blue-glow);
+}
+.collaborator-button-green:hover {
+  color: #ffffff;
+  background: #253758;
+  box-shadow: 0 0 20px var(--collab-github-blue-glow);
+  transform: translateY(-2px);
+}
+.collaborator-noir {
+  border-color: rgba(155, 92, 255, 0.16);
+}
+.collaborator-noir:hover {
+  border-color: rgba(155, 92, 255, 0.38);
+  box-shadow: 0 18px 42px rgba(155, 92, 255, 0.1);
+}
+.collaborator-noir:hover .collaborator-avatar {
+  border-color: rgba(155, 92, 255, 0.48);
+  box-shadow: 0 0 25px rgba(155, 92, 255, 0.18);
+}
+.collaborator-toxi {
+  border-color: rgba(57, 217, 138, 0.13);
+}
+.collaborator-toxi:hover {
+  border-color: rgba(57, 217, 138, 0.34);
+  box-shadow: 0 18px 42px rgba(57, 217, 138, 0.08);
+}
+.collaborator-toxi:hover .collaborator-avatar {
+  border-color: rgba(57, 217, 138, 0.44);
+  box-shadow: 0 0 25px rgba(57, 217, 138, 0.16);
+}
+.collaborator-dego {
+  border-color: rgba(57, 217, 138, 0.11);
+}
+.collaborator-dego:hover {
+  border-color: rgba(57, 217, 138, 0.3);
+  box-shadow: 0 18px 42px rgba(57, 217, 138, 0.065);
+}
+.collaborator-dego:hover .collaborator-avatar {
+  border-color: rgba(57, 217, 138, 0.38);
+  box-shadow: 0 0 25px rgba(57, 217, 138, 0.12);
+}
+.pending-github {
+  position: relative;
+  cursor: default;
+  opacity: 0.72;
+}
+.pending-github:hover {
+  transform: none;
+  background: rgba(57, 217, 138, 0.1);
+  border-color: rgba(57, 217, 138, 0.28);
+  box-shadow: none;
+}
+.pending-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  color: rgba(245, 250, 252, 0.92);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.pending-github[aria-disabled="true"] {
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .collaborators-section {
+    padding: 90px 20px 100px;
+  }
+  .collaborators-heading {
+    margin-bottom: 42px;
+  }
+  .collaborators-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .collaborator-card {
+    padding: 19px;
+  }
+  .collaborator-profile {
+    gap: 14px;
+  }
+  .collaborator-avatar {
+    width: 68px;
+    height: 68px;
+  }
+  .collaborator-info h3 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 650px) {
+  .collaborators-section {
+    padding: 75px 16px 85px;
+  }
+  .collaborators-heading {
+    margin-bottom: 34px;
+  }
+  .collaborators-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+  .collaborators-subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .collaborators-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .collaborator-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+  .collaborator-profile {
+    gap: 14px;
+  }
+  .collaborator-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .collaborator-info h3 {
+    font-size: 16px;
+  }
+  .collaborator-role {
+    font-size: 11px;
+    margin-top: 6px;
+    margin-bottom: 11px;
+  }
+  .collaborator-button {
+    min-height: 33px;
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 400px) {
+  .collaborators-section {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .collaborator-card {
+    padding: 15px;
+  }
+  .collaborator-profile {
+    gap: 12px;
+  }
+  .collaborator-avatar {
+    width: 62px;
+    height: 62px;
+  }
+  .collaborator-info h3 {
+    font-size: 15px;
+  }
+  .collaborator-role {
+    font-size: 10px;
+  }
+  .collaborator-button {
+    font-size: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .pending-label {
+    font-size: 8px;
+    padding: 3px 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .collaborator-card,
+  .collaborator-avatar,
+  .collaborator-button,
+  .collaborator-button svg {
+    transition: none;
+  }
+}
