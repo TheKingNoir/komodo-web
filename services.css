@@ -17,6 +17,7 @@
   overflow: hidden;
   box-sizing: border-box;
 }
+
 .services-section::before {
   content: "";
   position: absolute;
@@ -28,6 +29,7 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
   pointer-events: none;
 }
+
 .services-section::after {
   content: "";
   position: absolute;
@@ -39,6 +41,7 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.055), transparent);
   pointer-events: none;
 }
+
 .services-title {
   position: relative;
   z-index: 1;
@@ -51,6 +54,7 @@
   margin: 0 0 55px;
   text-align: center;
 }
+
 .services-container {
   width: 100%;
   max-width: 1280px;
@@ -60,6 +64,7 @@
   position: relative;
   z-index: 1;
 }
+
 .service-card {
   width: 100%;
   height: 200px;
@@ -73,10 +78,12 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
+
 .service-card:hover {
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.9);
 }
+
 .service-content-wrapper {
   flex: 1;
   display: flex;
@@ -85,9 +92,11 @@
   gap: 25px;
   padding: 20px 35px;
 }
+
 .service-info {
   flex: 1.2;
 }
+
 .service-name {
   font-size: 21px;
   font-weight: 800;
@@ -95,18 +104,21 @@
   margin-bottom: 6px;
   line-height: 1.2;
 }
+
 .service-description {
   font-size: 13px;
   line-height: 1.45;
   color: #4b5563;
   margin: 0;
 }
+
 .service-divider {
   width: 2px;
   height: 110px;
   background-color: #e5e7eb;
   flex-shrink: 0;
 }
+
 .service-servers-block {
   display: flex;
   flex-direction: column;
@@ -114,6 +126,7 @@
   flex-shrink: 0;
   min-width: 110px;
 }
+
 .servers-label {
   font-size: 14px;
   font-weight: 800;
@@ -122,11 +135,13 @@
   letter-spacing: 0.8px;
   margin-bottom: 2px;
 }
+
 .servers-logos {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .server-item {
   display: flex;
   align-items: center;
@@ -136,42 +151,53 @@
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+
 .server-item img {
   height: 17px;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
+
 .server-item:hover {
   transform: translateX(5px);
 }
+
 .server-item:hover img {
   transform: scale(1.15);
 }
+
 .server-item.node {
   color: #21a359;
 }
+
 .server-item.python {
   color: #3776ab;
 }
+
 .server-item.golang {
   color: #00add8;
 }
+
 .server-item.java {
   color: #e76f00;
 }
+
 .server-item.whatsapp {
   color: #25d366;
 }
+
 .server-item.telegram {
   color: #229ed9;
 }
+
 .server-item.basilisk-e1,
 .server-item.basilisk-e2,
 .server-item.basilisk-e3,
 .server-item.basilisk-a35 {
   color: #234b33;
 }
+
 .service-action-block {
   display: flex;
   flex-direction: column;
@@ -180,6 +206,7 @@
   gap: 12px;
   flex-shrink: 0;
 }
+
 .action-label {
   font-size: 13px;
   font-weight: 800;
@@ -187,63 +214,83 @@
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
+
+/* 🟢 MODIFICACIÓN CLAVE: Ancho fijo unificado, centrado y control de cajas */
 .service-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: #1e2a44;
   color: #ffffff;
-  padding: 10px 32px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.25s ease;
   box-shadow: 0 4px 12px rgba(30, 42, 68, 0.15);
+  width: 190px;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
 }
+
 .service-btn:hover {
   background: #30456e;
   transform: translateY(-2px);
 }
+
 .service-btn svg {
   transition: transform 0.25s ease;
 }
+
 .service-btn:hover svg {
   transform: translateX(4px);
 }
+
 .service-name.phone-title {
   color: #cb3429;
 }
+
 .servers-label.phone-label,
 .action-label.phone-label {
   color: #cb3429;
 }
+
 .service-btn.phone-btn {
   background: #cb3429;
   box-shadow: 0 4px 12px rgba(203, 52, 41, 0.25);
 }
+
 .service-btn.phone-btn:hover {
   background: #a8281e;
 }
+
 .service-name.ai-title {
   color: #234b33;
 }
+
 .servers-label.ai-label,
 .action-label.ai-label {
   color: #234b33;
 }
+
 .service-btn.ai-btn {
   background: #234b33;
   box-shadow: 0 4px 12px rgba(35, 75, 51, 0.25);
 }
+
 .service-btn.ai-btn:hover {
   background: #173423;
 }
+
 .service-image {
   width: 350px;
   height: 100%;
   flex-shrink: 0;
 }
+
 .service-image img {
   width: 100%;
   height: 100%;
@@ -251,6 +298,7 @@
   object-position: center;
   display: block;
 }
+
 @media (max-width: 1024px) {
   .services-section {
     padding: 80px 40px 100px;
@@ -274,57 +322,71 @@
     height: 180px;
   }
 }
+
 .service-action-block {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .action-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+
 .server-item.basilisk-e1,
 .server-item.basilisk-e2,
 .server-item.basilisk-e3 {
   color: #2e6f4a;
 }
+
 .server-item.basilisk-a35 {
   color: #234b33;
 }
+
 .custom-buttons-group {
   display: flex;
   gap: 12px;
 }
+
 .service-btn.email-btn {
   background: #486fd8;
   box-shadow: 0 4px 12px rgba(72, 111, 216, 0.25);
 }
+
 .service-btn.email-btn:hover {
   background: #3559c2;
 }
+
 .service-btn.whatsapp-btn {
   background: #25d366;
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
 }
+
 .service-btn.whatsapp-btn:hover {
   background: #1fb85a;
 }
+
 .service-card.custom-service-card {
   height: auto;
   min-height: 130px;
 }
+
 .custom-service-card .service-content-wrapper {
   padding: 22px 35px;
   justify-content: flex-start;
   gap: 35px;
 }
+
 .custom-service-card .service-divider {
   height: 70px;
 }
+
 .custom-service-card .service-info {
   flex: none;
 }
+
 @media (max-width: 768px) {
   .services-section {
     padding: 70px 20px 85px;
@@ -343,12 +405,14 @@
   }
   .custom-buttons-group {
     flex-direction: column;
-  }
-  .service-btn.custom-btn {
     width: 100%;
-    justify-content: center;
+  }
+  /* 🟢 MODIFICACIÓN EN MÓVIL: Ocupan el 100% en columna pero mantienen uniformidad exacta */
+  .service-btn {
+    width: 100%;
   }
 }
+
 .service-toggle-btn {
   display: flex;
   align-items: center;
@@ -363,18 +427,23 @@
   background: #1e2a44;
   border-radius: 0;
 }
+
 .service-toggle-btn.phone-btn {
   background: #cb3429 !important;
 }
+
 .service-toggle-btn.ai-btn {
   background: #234b33 !important;
 }
+
 .service-toggle-btn svg {
   transition: transform 0.3s ease;
 }
+
 .service-toggle-btn.open svg {
   transform: rotate(180deg);
 }
+
 @media (prefers-reduced-motion: reduce) {
   .service-card,
   .service-btn,
