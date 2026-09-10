@@ -1,8 +1,7 @@
 .services-section {
   position: relative;
   width: 100%;
-  padding: 90px 20px 110px;
-  /* Fondo gris claro suave típico del neumorfismo luminoso */
+  padding: 90px 40px 110px;
   background: #e4ebf5;
   display: flex;
   flex-direction: column;
@@ -21,7 +20,7 @@
   z-index: 1;
   color: #2b3b51;
   font-family: "Inter", sans-serif;
-  font-size: clamp(34px, 5vw, 48px);
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.5px;
@@ -30,154 +29,125 @@
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Contenedor en cuadrícula para que las tarjetas floten ordenadamente */
 .services-container {
   width: 100%;
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  position: relative;
-  z-index: 1;
-  justify-items: center;
-}
-
-/* 🟢 TARJETA PRINCIPAL ESTILO NEUMORFISMO TÁCTIL */
-.service-card {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  min-height: 540px;
-  background: #e4ebf5;
-  /* Doble sombra: luz blanca arriba-izquierda y sombra oscura abajo-derecha */
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
-              -9px -9px 16px rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 30px;
-  padding: 30px 24px;
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
   align-items: center;
-  text-align: center;
+}
+
+/* 🟢 TARJETA FIJA HORIZONTAL (IGUAL EN PC Y MÓVIL) */
+.service-card {
+  width: 100%;
+  max-width: 1050px;
+  height: 200px;
+  background: #e4ebf5;
+  box-shadow: 9px 9px 18px rgba(163, 177, 198, 0.6), 
+              -9px -9px 18px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
 .service-card:hover {
-  box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
-              -12px -12px 20px rgba(255, 255, 255, 0.9);
+  box-shadow: 12px 12px 22px rgba(163, 177, 198, 0.7), 
+              -12px -12px 22px rgba(255, 255, 255, 0.9);
 }
 
 .service-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
-  padding: 0;
   flex: 1;
-}
-
-/* 🟢 CONTENEDOR DE IMAGEN HUNDIDO (INSET) */
-.service-image {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  /* Sombra interna para crear efecto de profundidad cóncava */
-  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, 0.6), 
-              inset -5px -5px 10px rgba(255, 255, 255, 0.8);
-  padding: 6px;
-  margin-bottom: 5px;
-}
-
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 30px;
 }
 
 .service-info {
-  width: 100%;
+  flex: 1.2;
 }
 
 .service-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #2b3b51;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   line-height: 1.2;
 }
 
 .service-description {
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.45;
   color: #627d98;
   margin: 0;
-  padding: 0 10px;
 }
 
-/* Línea divisora estilo ranura */
+/* Línea divisora vertical estilo ranura */
 .service-divider {
-  width: 80%;
-  height: 2px;
+  width: 2px;
+  height: 110px;
   background-color: #d9e2ec;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  margin: 5px 0;
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
   flex-shrink: 0;
 }
 
-/* Bloque de servidores / características */
 .service-servers-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
+  gap: 6px;
+  flex-shrink: 0;
+  min-width: 110px;
 }
 
 .servers-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   color: #486581;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
 }
 
 .servers-logos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* 🟢 PASTILLAS TÁCTILES HUNDIDAS PARA LOS SERVIDORES */
+/* Pastillas táctiles hundidas para servidores */
 .server-item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
   background: #e4ebf5;
-  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.5), 
-              inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.5), 
+              inset -2px -2px 5px rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .server-item img {
-  height: 14px;
+  height: 15px;
   width: auto;
   object-fit: contain;
 }
 
 .server-item:hover {
-  transform: translateY(-2px);
+  transform: translateX(4px);
 }
 
 .server-item.node { color: #10b981; }
@@ -194,21 +164,21 @@
 .service-action-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
   gap: 8px;
-  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .action-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   color: #486581;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
-/* 🟢 BOTONES TÁCTILES ELEVADOS */
+/* Botones táctiles elevados uniformes */
 .service-btn {
   display: inline-flex;
   align-items: center;
@@ -216,36 +186,39 @@
   gap: 8px;
   background: #e4ebf5;
   color: #2b3b51;
-  padding: 12px 20px;
-  border-radius: 14px;
+  padding: 10px 18px;
+  border-radius: 10px;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 5px 5px 10px rgba(163, 177, 198, 0.5), 
-              -5px -5px 10px rgba(255, 255, 255, 0.8);
-  width: 100%;
-  max-width: 220px;
+  box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.5), 
+              -4px -4px 8px rgba(255, 255, 255, 0.8);
+  width: 190px !important;
+  min-width: 190px !important;
+  max-width: 190px !important;
   box-sizing: border-box;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .service-btn:hover {
-  box-shadow: 7px 7px 14px rgba(163, 177, 198, 0.6), 
-              -7px -7px 14px rgba(255, 255, 255, 0.9);
+  box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6), 
+              -6px -6px 12px rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
 }
 
 .service-btn:active {
-  /* Efecto táctil de botón presionado (hundido) */
-  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), 
-              inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.6), 
+              inset -2px -2px 5px rgba(255, 255, 255, 0.8);
   transform: translateY(0);
 }
 
 .service-btn svg {
-  transition: transform 0.20s ease;
+  transition: transform 0.2s ease;
   flex-shrink: 0;
 }
 
@@ -253,7 +226,7 @@
   transform: translateX(4px);
 }
 
-/* Variantes de color conservando la lógica original pero adaptadas al estilo suave */
+/* Variantes de color */
 .service-name.phone-title { color: #dc2626; }
 .servers-label.phone-label, .action-label.phone-label { color: #b91c1c; }
 .service-btn.phone-btn { color: #dc2626; }
@@ -262,48 +235,47 @@
 .servers-label.ai-label, .action-label.ai-label { color: #047857; }
 .service-btn.ai-btn { color: #059669; }
 
+/* Contenedor de imagen horizontal hundido */
+.service-image {
+  width: 280px;
+  height: 100%;
+  flex-shrink: 0;
+  box-shadow: inset 4px 0 8px rgba(163, 177, 198, 0.4);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .custom-buttons-group {
   display: flex;
   gap: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
-.custom-buttons-group .service-btn {
-  max-width: 130px;
-  padding: 10px 12px;
-  font-size: 12px;
 }
 
 .service-btn.email-btn { color: #2563eb; }
 .service-btn.whatsapp-btn { color: #16a34a; }
 
 .service-card.custom-service-card {
-  min-height: 480px;
+  height: auto;
+  min-height: 130px;
 }
 
 .custom-service-card .service-content-wrapper {
-  justify-content: space-between;
-  gap: 15px;
+  padding: 22px 30px;
+  justify-content: flex-start;
+  gap: 30px;
 }
 
-@media (max-width: 768px) {
-  .services-section {
-    padding: 60px 15px 80px;
-  }
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-  .service-card {
-    max-width: 100%;
-  }
-  .custom-buttons-group {
-    flex-direction: column;
-    width: 100%;
-  }
-  .custom-buttons-group .service-btn {
-    max-width: 100%;
-  }
+.custom-service-card .service-divider {
+  height: 70px;
+}
+
+.custom-service-card .service-info {
+  flex: none;
 }
 
 .service-toggle-btn {
@@ -318,7 +290,7 @@
   font-weight: 700;
   cursor: pointer;
   background: #e4ebf5;
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.5), 
               -4px -4px 8px rgba(255, 255, 255, 0.8);
   margin-bottom: 10px;
