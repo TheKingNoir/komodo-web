@@ -215,7 +215,7 @@
   letter-spacing: 0.8px;
 }
 
-/* 🟢 MODIFICACIÓN CLAVE: Ancho fijo unificado, centrado y control de cajas */
+/* 🟢 UNIFICACIÓN ESTRICTA DE BOTONES EN PC */
 .service-btn {
   display: inline-flex;
   align-items: center;
@@ -230,10 +230,14 @@
   text-decoration: none;
   transition: all 0.25s ease;
   box-shadow: 0 4px 12px rgba(30, 42, 68, 0.15);
-  width: 190px;
+  width: 190px !important;
+  min-width: 190px !important;
+  max-width: 190px !important;
   box-sizing: border-box;
   text-align: center;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .service-btn:hover {
@@ -243,6 +247,7 @@
 
 .service-btn svg {
   transition: transform 0.25s ease;
+  flex-shrink: 0;
 }
 
 .service-btn:hover svg {
@@ -319,30 +324,7 @@
   }
   .service-image {
     width: 100%;
-    height: 180px;
   }
-}
-
-.service-action-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.action-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.server-item.basilisk-e1,
-.server-item.basilisk-e2,
-.server-item.basilisk-e3 {
-  color: #2e6f4a;
-}
-
-.server-item.basilisk-a35 {
-  color: #234b33;
 }
 
 .custom-buttons-group {
@@ -407,9 +389,10 @@
     flex-direction: column;
     width: 100%;
   }
-  /* 🟢 MODIFICACIÓN EN MÓVIL: Ocupan el 100% en columna pero mantienen uniformidad exacta */
   .service-btn {
-    width: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
