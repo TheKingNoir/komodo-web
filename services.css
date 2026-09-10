@@ -29,7 +29,6 @@
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Cuadrícula adaptable para PC y móvil */
 .services-container {
   width: 100%;
   max-width: 1200px;
@@ -39,14 +38,13 @@
   position: relative;
   z-index: 1;
   justify-items: center;
+  align-items: start;
 }
 
-/* Tarjeta vertical neumórfica unificada */
+/* Tarjeta completa desplegable */
 .service-card {
   width: 100%;
   max-width: 380px;
-  height: auto !important;
-  min-height: 520px;
   background: #e4ebf5 !important;
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
               -9px -9px 16px rgba(255, 255, 255, 0.8) !important;
@@ -59,11 +57,47 @@
   text-align: center;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.service-card:hover {
-  box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
-              -12px -12px 20px rgba(255, 255, 255, 0.9) !important;
+/* Cabecera interactiva que actúa como disparador */
+.service-card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-toggle-icon {
+  margin-top: 10px;
+  color: #486581;
+  transition: transform 0.3s ease;
+}
+
+.service-card.open .card-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Contenido interno desplegable */
+.service-collapsible-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+  gap: 18px;
+}
+
+.service-card.open .service-collapsible-content {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 15px;
 }
 
 .service-content-wrapper {
@@ -73,8 +107,6 @@
   width: 100%;
   gap: 18px;
   padding: 0 !important;
-  flex: 1;
-  justify-content: space-between;
 }
 
 .service-info {
@@ -97,7 +129,6 @@
   padding: 0 5px;
 }
 
-/* Ocultar divisor horizontal antiguo si interfiere */
 .service-divider {
   display: none !important;
 }
@@ -125,7 +156,6 @@
   gap: 6px;
 }
 
-/* Pastillas de servidores hundidas (inset) */
 .server-item {
   display: inline-flex;
   align-items: center;
@@ -178,7 +208,6 @@
   letter-spacing: 1px;
 }
 
-/* Botones elevados táctiles */
 .service-btn {
   display: inline-flex;
   align-items: center;
@@ -223,7 +252,6 @@
   transform: translateX(4px);
 }
 
-/* Contenedor de imagen circular hundido abajo */
 .service-image {
   width: 95px !important;
   height: 95px !important;
@@ -244,7 +272,6 @@
   display: block;
 }
 
-/* Colores personalizados según el tipo de servicio */
 .service-name.phone-title { color: #dc2626 !important; }
 .servers-label.phone-label, .action-label.phone-label { color: #b91c1c !important; }
 .service-btn.phone-btn { color: #dc2626 !important; }
@@ -270,9 +297,5 @@
 .service-btn.whatsapp-btn { color: #16a34a !important; }
 
 .service-card.custom-service-card {
-  min-height: 420px;
-}
-
-.custom-service-card .service-content-wrapper {
-  justify-content: space-between;
+  min-height: auto;
 }
