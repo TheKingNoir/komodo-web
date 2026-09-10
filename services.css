@@ -1,9 +1,9 @@
 .services-section {
   position: relative;
   width: 100%;
-  padding: 90px 70px 110px;
-  /* Fondo base uniforme ideal para que resalte el neumorfismo */
-  background: #182238;
+  padding: 90px 20px 110px;
+  /* Fondo gris claro suave típico del neumorfismo luminoso */
+  background: #e4ebf5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,13 +13,13 @@
 
 .services-section::before,
 .services-section::after {
-  display: none; /* Quitamos las líneas anteriores para limpiar el look neumórfico */
+  display: none;
 }
 
 .services-title {
   position: relative;
   z-index: 1;
-  color: #ffffff;
+  color: #2b3b51;
   font-family: "Inter", sans-serif;
   font-size: clamp(34px, 5vw, 48px);
   font-weight: 800;
@@ -27,218 +27,225 @@
   letter-spacing: -1.5px;
   margin: 0 0 55px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
+/* Contenedor en cuadrícula para que las tarjetas floten ordenadamente */
 .services-container {
   width: 100%;
-  max-width: 1280px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
   position: relative;
   z-index: 1;
+  justify-items: center;
 }
 
-/* 🟢 ESTILO NEUMÓRFICO PARA LAS TARJETAS */
+/* 🟢 TARJETA PRINCIPAL ESTILO NEUMORFISMO TÁCTIL */
 .service-card {
   width: 100%;
-  height: 200px;
-  background: #182238;
-  /* Sombra clara arriba-izquierda y sombra oscura abajo-derecha */
-  box-shadow: 9px 9px 18px rgba(12, 17, 28, 0.6), 
-              -9px -9px 18px rgba(24, 32, 52, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
-  padding: 0;
+  max-width: 380px;
+  height: auto;
+  min-height: 540px;
+  background: #e4ebf5;
+  /* Doble sombra: luz blanca arriba-izquierda y sombra oscura abajo-derecha */
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
+              -9px -9px 16px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 30px 24px;
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .service-card:hover {
-  /* Efecto de relieve más pronunciado al pasar el cursor */
-  box-shadow: 12px 12px 24px rgba(12, 17, 28, 0.7), 
-              -12px -12px 24px rgba(24, 32, 52, 0.6);
-  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
+              -12px -12px 20px rgba(255, 255, 255, 0.9);
 }
 
 .service-content-wrapper {
-  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 20px 35px;
+  width: 100%;
+  gap: 20px;
+  padding: 0;
+  flex: 1;
+}
+
+/* 🟢 CONTENEDOR DE IMAGEN HUNDIDO (INSET) */
+.service-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Sombra interna para crear efecto de profundidad cóncava */
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, 0.6), 
+              inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  margin-bottom: 5px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .service-info {
-  flex: 1.2;
+  width: 100%;
 }
 
 .service-name {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 6px;
+  color: #2b3b51;
+  margin-bottom: 8px;
   line-height: 1.2;
 }
 
 .service-description {
   font-size: 13px;
-  line-height: 1.45;
-  color: #94a3b8;
+  line-height: 1.5;
+  color: #627d98;
   margin: 0;
+  padding: 0 10px;
 }
 
+/* Línea divisora estilo ranura */
 .service-divider {
-  width: 2px;
-  height: 110px;
-  background-color: rgba(255, 255, 255, 0.06);
+  width: 80%;
+  height: 2px;
+  background-color: #d9e2ec;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  margin: 5px 0;
   flex-shrink: 0;
 }
 
+/* Bloque de servidores / características */
 .service-servers-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex-shrink: 0;
-  min-width: 110px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .servers-label {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
-  color: #cbd5e1;
+  color: #486581;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 2px;
+  letter-spacing: 1px;
 }
 
 .servers-logos {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
+/* 🟢 PASTILLAS TÁCTILES HUNDIDAS PARA LOS SERVIDORES */
 .server-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 6px;
+  font-size: 12px;
   font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #e4ebf5;
+  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.5), 
+              inset -3px -3px 6px rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .server-item img {
-  height: 17px;
+  height: 14px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.2s ease;
 }
 
 .server-item:hover {
-  transform: translateX(5px);
+  transform: translateY(-2px);
 }
 
-.server-item:hover img {
-  transform: scale(1.15);
-}
-
-.server-item.node {
-  color: #4ade80;
-}
-
-.server-item.python {
-  color: #60a5fa;
-}
-
-.server-item.golang {
-  color: #38bdf8;
-}
-
-.server-item.java {
-  color: #fb923c;
-}
-
-.server-item.whatsapp {
-  color: #4ade80;
-}
-
-.server-item.telegram {
-  color: #38bdf8;
-}
-
+.server-item.node { color: #10b981; }
+.server-item.python { color: #3b82f6; }
+.server-item.golang { color: #06b6d4; }
+.server-item.java { color: #f59e0b; }
+.server-item.whatsapp { color: #10b981; }
+.server-item.telegram { color: #0ea5e9; }
 .server-item.basilisk-e1,
 .server-item.basilisk-e2,
 .server-item.basilisk-e3,
-.server-item.basilisk-a35 {
-  color: #34d399;
-}
+.server-item.basilisk-a35 { color: #059669; }
 
 .service-action-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
-  flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  margin-top: auto;
 }
 
 .action-label {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
-  color: #cbd5e1;
+  color: #486581;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 
-/* 🟢 BOTONES CON ESTILO NEUMÓRFICO HUNDIDO O ELEVADO */
+/* 🟢 BOTONES TÁCTILES ELEVADOS */
 .service-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #182238;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 12px;
+  background: #e4ebf5;
+  color: #2b3b51;
+  padding: 12px 20px;
+  border-radius: 14px;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.25s ease;
-  /* Sombra neumórfica para botón flotante */
-  box-shadow: 5px 5px 10px rgba(12, 17, 28, 0.5), 
-              -5px -5px 10px rgba(24, 32, 52, 0.4);
-  width: 190px !important;
-  min-width: 190px !important;
-  max-width: 190px !important;
+  transition: all 0.2s ease;
+  box-shadow: 5px 5px 10px rgba(163, 177, 198, 0.5), 
+              -5px -5px 10px rgba(255, 255, 255, 0.8);
+  width: 100%;
+  max-width: 220px;
   box-sizing: border-box;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .service-btn:hover {
+  box-shadow: 7px 7px 14px rgba(163, 177, 198, 0.6), 
+              -7px -7px 14px rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
-  box-shadow: 7px 7px 14px rgba(12, 17, 28, 0.6), 
-              -7px -7px 14px rgba(24, 32, 52, 0.5);
 }
 
 .service-btn:active {
-  /* Efecto hundido al hacer clic (neumorfismo insets) */
-  box-shadow: inset 3px 3px 6px rgba(12, 17, 28, 0.6), 
-              inset -3px -3px 6px rgba(24, 32, 52, 0.5);
+  /* Efecto táctil de botón presionado (hundido) */
+  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), 
+              inset -3px -3px 6px rgba(255, 255, 255, 0.8);
   transform: translateY(0);
 }
 
 .service-btn svg {
-  transition: transform 0.25s ease;
+  transition: transform 0.20s ease;
   flex-shrink: 0;
 }
 
@@ -246,126 +253,56 @@
   transform: translateX(4px);
 }
 
-.service-name.phone-title {
-  color: #f87171;
-}
+/* Variantes de color conservando la lógica original pero adaptadas al estilo suave */
+.service-name.phone-title { color: #dc2626; }
+.servers-label.phone-label, .action-label.phone-label { color: #b91c1c; }
+.service-btn.phone-btn { color: #dc2626; }
 
-.servers-label.phone-label,
-.action-label.phone-label {
-  color: #fca5a5;
-}
-
-.service-btn.phone-btn {
-  background: #182238;
-  color: #f87171;
-  box-shadow: 5px 5px 10px rgba(12, 17, 28, 0.5), 
-              -5px -5px 10px rgba(24, 32, 52, 0.4);
-}
-
-.service-name.ai-title {
-  color: #34d399;
-}
-
-.servers-label.ai-label,
-.action-label.ai-label {
-  color: #6ee7b7;
-}
-
-.service-btn.ai-btn {
-  background: #182238;
-  color: #34d399;
-  box-shadow: 5px 5px 10px rgba(12, 17, 28, 0.5), 
-              -5px -5px 10px rgba(24, 32, 52, 0.4);
-}
-
-.service-image {
-  width: 350px;
-  height: 100%;
-  flex-shrink: 0;
-  /* Efecto hundido para la imagen dentro de la tarjeta */
-  box-shadow: inset 4px 4px 8px rgba(12, 17, 28, 0.4);
-}
-
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-@media (max-width: 1024px) {
-  .services-section {
-    padding: 80px 40px 100px;
-  }
-  .service-card {
-    height: auto;
-    flex-direction: column-reverse;
-  }
-  .service-content-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px;
-    gap: 20px;
-  }
-  .service-divider {
-    width: 100%;
-    height: 1px;
-  }
-  .service-image {
-    width: 100%;
-    height: 180px;
-  }
-}
+.service-name.ai-title { color: #059669; }
+.servers-label.ai-label, .action-label.ai-label { color: #047857; }
+.service-btn.ai-btn { color: #059669; }
 
 .custom-buttons-group {
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
 }
 
+.custom-buttons-group .service-btn {
+  max-width: 130px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.service-btn.email-btn { color: #2563eb; }
+.service-btn.whatsapp-btn { color: #16a34a; }
+
 .service-card.custom-service-card {
-  height: auto;
-  min-height: 130px;
+  min-height: 480px;
 }
 
 .custom-service-card .service-content-wrapper {
-  padding: 22px 35px;
-  justify-content: flex-start;
-  gap: 35px;
-}
-
-.custom-service-card .service-divider {
-  height: 70px;
-}
-
-.custom-service-card .service-info {
-  flex: none;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 70px 20px 85px;
+    padding: 60px 15px 80px;
   }
-  .services-title {
-    font-size: 32px;
-    letter-spacing: -1px;
-    margin-bottom: 34px;
+  .services-container {
+    grid-template-columns: 1fr;
   }
-  .service-divider {
-    display: none;
-  }
-  .custom-action-block {
-    align-items: stretch !important;
-    width: 100%;
+  .service-card {
+    max-width: 100%;
   }
   .custom-buttons-group {
     flex-direction: column;
     width: 100%;
   }
-  .service-btn {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
+  .custom-buttons-group .service-btn {
+    max-width: 100%;
   }
 }
 
@@ -373,25 +310,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 14px 18px;
   width: 100%;
   border: none;
-  color: #ffffff;
-  font-size: 16px;
+  color: #2b3b51;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  background: #182238;
-  border-radius: 0;
-}
-
-.service-toggle-btn.phone-btn {
-  background: #182238 !important;
-  color: #f87171;
-}
-
-.service-toggle-btn.ai-btn {
-  background: #182238 !important;
-  color: #34d399;
+  background: #e4ebf5;
+  border-radius: 14px;
+  box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.5), 
+              -4px -4px 8px rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
 }
 
 .service-toggle-btn svg {
