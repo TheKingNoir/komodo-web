@@ -66,13 +66,7 @@
               -12px -12px 20px rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Eliminamos cualquier comportamiento desplegable remanente */
-.service-card-header,
-.service-collapsible-content,
-.card-toggle-icon {
-  display: contents !important;
-}
-
+/* Contenido interno estático */
 .service-content-wrapper {
   display: flex;
   flex-direction: column;
