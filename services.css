@@ -1,8 +1,8 @@
 .services-section {
   position: relative;
   width: 100%;
-  padding: 90px 40px 110px;
-  background: #e4ebf5;
+  padding: 90px 20px 110px;
+  background: #e4ebf5 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,136 +18,137 @@
 .services-title {
   position: relative;
   z-index: 1;
-  color: #2b3b51;
+  color: #2b3b51 !important;
   font-family: "Inter", sans-serif;
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.5px;
-  margin: 0 0 55px;
+  margin: 0 0 45px;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
+/* Cuadrícula adaptable para PC y móvil */
 .services-container {
   width: 100%;
   max-width: 1200px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   position: relative;
   z-index: 1;
-  align-items: center;
+  justify-items: center;
 }
 
-/* 🟢 TARJETA FIJA HORIZONTAL (IGUAL EN PC Y MÓVIL) */
+/* Tarjeta vertical neumórfica unificada */
 .service-card {
   width: 100%;
-  max-width: 1050px;
-  height: 200px;
-  background: #e4ebf5;
-  box-shadow: 9px 9px 18px rgba(163, 177, 198, 0.6), 
-              -9px -9px 18px rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  padding: 0;
+  max-width: 380px;
+  height: auto !important;
+  min-height: 520px;
+  background: #e4ebf5 !important;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
+              -9px -9px 16px rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 30px !important;
+  padding: 30px 24px;
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
 .service-card:hover {
-  box-shadow: 12px 12px 22px rgba(163, 177, 198, 0.7), 
-              -12px -12px 22px rgba(255, 255, 255, 0.9);
+  box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
+              -12px -12px 20px rgba(255, 255, 255, 0.9) !important;
 }
 
 .service-content-wrapper {
-  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
+  gap: 18px;
+  padding: 0 !important;
+  flex: 1;
   justify-content: space-between;
-  gap: 20px;
-  padding: 20px 30px;
 }
 
 .service-info {
-  flex: 1.2;
+  width: 100%;
 }
 
 .service-name {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 800;
   color: #2b3b51;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   line-height: 1.2;
 }
 
 .service-description {
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #627d98;
   margin: 0;
+  padding: 0 5px;
 }
 
-/* Línea divisora vertical estilo ranura */
+/* Ocultar divisor horizontal antiguo si interfiere */
 .service-divider {
-  width: 2px;
-  height: 110px;
-  background-color: #d9e2ec;
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
-  flex-shrink: 0;
+  display: none !important;
 }
 
 .service-servers-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex-shrink: 0;
-  min-width: 110px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .servers-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   color: #486581;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 2px;
+  letter-spacing: 1px;
 }
 
 .servers-logos {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 
-/* Pastillas táctiles hundidas para servidores */
+/* Pastillas de servidores hundidas (inset) */
 .server-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 6px;
+  font-size: 12px;
   font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 10px;
   background: #e4ebf5;
-  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.5), 
-              inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.5), 
+              inset -3px -3px 6px rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .server-item img {
-  height: 15px;
+  height: 14px;
   width: auto;
   object-fit: contain;
 }
 
 .server-item:hover {
-  transform: translateX(4px);
+  transform: translateY(-2px);
 }
 
 .server-item.node { color: #10b981; }
@@ -164,56 +165,52 @@
 .service-action-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  width: 100%;
   gap: 8px;
-  flex-shrink: 0;
 }
 
 .action-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   color: #486581;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 
-/* Botones táctiles elevados uniformes */
+/* Botones elevados táctiles */
 .service-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #e4ebf5;
-  color: #2b3b51;
-  padding: 10px 18px;
-  border-radius: 10px;
+  background: #e4ebf5 !important;
+  color: #2b3b51 !important;
+  padding: 12px 18px;
+  border-radius: 14px;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.5), 
-              -4px -4px 8px rgba(255, 255, 255, 0.8);
-  width: 190px !important;
-  min-width: 190px !important;
-  max-width: 190px !important;
+  box-shadow: 5px 5px 10px rgba(163, 177, 198, 0.5), 
+              -5px -5px 10px rgba(255, 255, 255, 0.8) !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  min-width: unset !important;
   box-sizing: border-box;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .service-btn:hover {
-  box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6), 
-              -6px -6px 12px rgba(255, 255, 255, 0.9);
+  box-shadow: 7px 7px 14px rgba(163, 177, 198, 0.6), 
+              -7px -7px 14px rgba(255, 255, 255, 0.9) !important;
   transform: translateY(-2px);
 }
 
 .service-btn:active {
-  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.6), 
-              inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), 
+              inset -3px -3px 6px rgba(255, 255, 255, 0.8) !important;
   transform: translateY(0);
 }
 
@@ -226,90 +223,56 @@
   transform: translateX(4px);
 }
 
-/* Variantes de color */
-.service-name.phone-title { color: #dc2626; }
-.servers-label.phone-label, .action-label.phone-label { color: #b91c1c; }
-.service-btn.phone-btn { color: #dc2626; }
-
-.service-name.ai-title { color: #059669; }
-.servers-label.ai-label, .action-label.ai-label { color: #047857; }
-.service-btn.ai-btn { color: #059669; }
-
-/* Contenedor de imagen horizontal hundido */
+/* Contenedor de imagen circular hundido abajo */
 .service-image {
-  width: 280px;
-  height: 100%;
+  width: 95px !important;
+  height: 95px !important;
+  border-radius: 50% !important;
+  overflow: hidden;
   flex-shrink: 0;
-  box-shadow: inset 4px 0 8px rgba(163, 177, 198, 0.4);
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.8) !important;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
   display: block;
 }
+
+/* Colores personalizados según el tipo de servicio */
+.service-name.phone-title { color: #dc2626 !important; }
+.servers-label.phone-label, .action-label.phone-label { color: #b91c1c !important; }
+.service-btn.phone-btn { color: #dc2626 !important; }
+
+.service-name.ai-title { color: #059669 !important; }
+.servers-label.ai-label, .action-label.ai-label { color: #047857 !important; }
+.service-btn.ai-btn { color: #059669 !important; }
 
 .custom-buttons-group {
   display: flex;
   gap: 10px;
+  width: 100%;
+  justify-content: center;
 }
 
-.service-btn.email-btn { color: #2563eb; }
-.service-btn.whatsapp-btn { color: #16a34a; }
+.custom-buttons-group .service-btn {
+  max-width: 130px !important;
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.service-btn.email-btn { color: #2563eb !important; }
+.service-btn.whatsapp-btn { color: #16a34a !important; }
 
 .service-card.custom-service-card {
-  height: auto;
-  min-height: 130px;
+  min-height: 420px;
 }
 
 .custom-service-card .service-content-wrapper {
-  padding: 22px 30px;
-  justify-content: flex-start;
-  gap: 30px;
-}
-
-.custom-service-card .service-divider {
-  height: 70px;
-}
-
-.custom-service-card .service-info {
-  flex: none;
-}
-
-.service-toggle-btn {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
-  width: 100%;
-  border: none;
-  color: #2b3b51;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  background: #e4ebf5;
-  border-radius: 12px;
-  box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.5), 
-              -4px -4px 8px rgba(255, 255, 255, 0.8);
-  margin-bottom: 10px;
-}
-
-.service-toggle-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.service-toggle-btn.open svg {
-  transform: rotate(180deg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .service-card,
-  .service-btn,
-  .server-item,
-  .server-item img,
-  .service-toggle-btn svg {
-    transition: none !important;
-  }
 }
