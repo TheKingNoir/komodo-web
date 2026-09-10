@@ -41,10 +41,12 @@
   align-items: start;
 }
 
-/* Tarjeta completa desplegable */
+/* Tarjetas estáticas y completamente visibles */
 .service-card {
   width: 100%;
   max-width: 380px;
+  height: auto !important;
+  min-height: 520px;
   background: #e4ebf5 !important;
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
               -9px -9px 16px rgba(255, 255, 255, 0.8) !important;
@@ -57,47 +59,18 @@
   text-align: center;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-/* Cabecera interactiva que actúa como disparador */
-.service-card-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
+.service-card:hover {
+  box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
+              -12px -12px 20px rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Eliminamos cualquier comportamiento desplegable remanente */
+.service-card-header,
+.service-collapsible-content,
 .card-toggle-icon {
-  margin-top: 10px;
-  color: #486581;
-  transition: transform 0.3s ease;
-}
-
-.service-card.open .card-toggle-icon {
-  transform: rotate(180deg);
-}
-
-/* Contenido interno desplegable */
-.service-collapsible-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
-  gap: 18px;
-}
-
-.service-card.open .service-collapsible-content {
-  max-height: 800px;
-  opacity: 1;
-  margin-top: 15px;
+  display: contents !important;
 }
 
 .service-content-wrapper {
@@ -107,6 +80,8 @@
   width: 100%;
   gap: 18px;
   padding: 0 !important;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .service-info {
@@ -237,21 +212,6 @@
   transform: translateY(-2px);
 }
 
-.service-btn:active {
-  box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), 
-              inset -3px -3px 6px rgba(255, 255, 255, 0.8) !important;
-  transform: translateY(0);
-}
-
-.service-btn svg {
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-
-.service-btn:hover svg {
-  transform: translateX(4px);
-}
-
 .service-image {
   width: 95px !important;
   height: 95px !important;
@@ -297,5 +257,5 @@
 .service-btn.whatsapp-btn { color: #16a34a !important; }
 
 .service-card.custom-service-card {
-  min-height: auto;
+  min-height: 420px;
 }
